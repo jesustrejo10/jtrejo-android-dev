@@ -11732,3 +11732,31 @@ html {
     left: -2vw;
   }
 }
+/* Project launcher icons: reserve space and let long titles wrap on mobile. */
+.project-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.project-icon {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(30, 30, 60, 0.12);
+}
+.project-heading-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 575.98px) {
+  .project-heading {
+    gap: 0.75rem;
+  }
+  .project-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+}
